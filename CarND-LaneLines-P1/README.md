@@ -12,13 +12,13 @@ Some steps include :-
 4. we define Region of interest(i.e. bottom half of th image)
 5. Apply Hough Transform and smoothing the final detected lane lines.
 
-For more detail refer to Link: [Medium Article](https://medium.com/@paramaggarwal/my-lane-detection-project-for-the-self-driving-car-nanodegree-by-udacity-36a230553bd3#.nsiuks2pk)
+For more detail refer to Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-lane-line-detection-udacity-p1-beae3ee172a3?sk=e1623b4ccc173e8fe51dbe8ba30e24b7)
 
 
 # Article
 I wrote an article about the steps involved in this algorithm as well as my experience with applying it on real-world self-collected data.Please refer to  
 
-Link: [Medium Article](https://medium.com/@paramaggarwal/my-lane-detection-project-for-the-self-driving-car-nanodegree-by-udacity-36a230553bd3#.nsiuks2pk)
+Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-lane-line-detection-udacity-p1-beae3ee172a3?sk=e1623b4ccc173e8fe51dbe8ba30e24b7)
 
 
 # Video
