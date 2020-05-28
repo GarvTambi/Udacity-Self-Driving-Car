@@ -24,7 +24,7 @@ Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-lane-lin
 # Video
 I talk about the individual steps and behaviour on additional self-collected driving data in my YouTube video below
 
-[Video about Project on YouTube](https://www.youtube.com/watch?v=IF0aRY-JbLo)
+![Video about Project on YouTube](https://www.youtube.com/watch?v=IF0aRY-JbLo)
 
 
 # Setup
