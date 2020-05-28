@@ -94,7 +94,10 @@ A browser window will appear showing the contents of the current directory.  Cli
 
 
 **For Any Queries/Feedback Feel Free to ping me at**
-https://www.instagram.com/tambi_garv05/
-https://www.linkedin.com/in/garv-tambi-a16338170/
+[myWhatsappGroup](https://chat.whatsapp.com/HewuxDMqqDK7Hxh4n7WYsh)
+[joinOnInstagram](https://www.instagram.com/tambi_garv05/) 
+[joinOnLinkedIn](https://www.linkedin.com/in/garv-tambi-a16338170/)
+
+
 
 
