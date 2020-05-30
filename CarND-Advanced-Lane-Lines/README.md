@@ -20,6 +20,15 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+For more detail refer to Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-advanced-lane-line-detection-udacity-p2-3745b3cc43e9) or join [myWhatsappGroup](https://chat.whatsapp.com/GbrXtUS8Tfq18c9YiHUOXZ)
+
+
+# Article
+I wrote an article about the steps involved in this algorithm as well as my experience with applying it on real-world self-collected data.Please refer to  
+
+Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-advanced-lane-line-detection-udacity-p2-3745b3cc43e9)
+
+
 [//]: # (Image References)
 
 [image1]: ./examples/undistort_output.png "Undistorted"
