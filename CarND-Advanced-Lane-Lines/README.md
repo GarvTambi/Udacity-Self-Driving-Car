@@ -39,28 +39,11 @@ The goals / steps of this project are the following:
 OpenCV providesome really helpful built-in-functions for the task on camera calibration. First of all to detect the calibration pattern in the [calibration images](./camera_cal/), we can use the function 'cv2.findChessboardCorners(image, pattern_size)'.
 
 Once we have stored the correspondeces between 3D world and 2D image points  for a bunch of images, we can proceed to actually calibrate the camera through 'cv2.calibrateCamera()'. Among anoher things, this function returs both the *camera matrix * and the *distortion coefficients*, which we can use to distort the frames.
-
-
-The code for this steps can be found in [calibration_utils](calibration_utils.py).  
+ 
 
 I applied this distortion correction to the test images using the 'cv2.distort()' function and obtained the following result (appreciating the effect of calibration is easier on the borders of the image): 
 
-<table style="width:100%">
-  <tr>
-    <th>
-      <p align="center">
-           <img src="./img/calibration_before.jpg" alt="calibration_before" width="60%" height="60%">
-           <br>Chessboard image before calibration
-      </p>
-    </th>
-    <th>
-      <p align="center">
-           <img src="./img/calibration_after.jpg" alt="calibration_after" width="60%" height="60%">
-           <br>Chessboard image after calibration
-      </p>
-    </th>
-  </tr>
-</table>
+![alt text][image1]
 
 ### Pipeline (single images)
 
