@@ -90,7 +90,14 @@ Therefore, My preprocessing phase normalizes images from [0, 255] to
 
 #### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data
 
-The train, valid and test data are prepreocessed.
+The train, valid and test data are prepreocessed and argumented.
+
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is (32, 32, 3)
+* The number of unique classes/labels in the data set is 43
+
 
 #### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -153,30 +160,6 @@ sign, so it seems that these images act as noises in the training data
 and drop out layer can reduce the negative effects on learning.
 
 The final accuracy in validation set is around 0.954.
-
-### Test a Model on New Images
-
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
-I want to see how the classifier performs on similar signs. The
-General Caution and Traffic signals: they both look like a vertical bar
-(see the visualization) when grayscaled. And pedestrains and child
-crossing look similar in low resolution.
-
-
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
-
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
-The accuracy on the new traffic signs is 63.6%, while it was 93% on
-the test set. This is a sign of underfitting. By looking at the
-virtualized result, I think this can be addressed by using more image
-preprocessing techniques on the training set.
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
