@@ -6,6 +6,14 @@
 
 In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train a model so it can decode traffic signs from natural images by using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then test your model program on new images of traffic signs you find on the web, or, if you're feeling adventurous pictures of traffic signs you find locally!
 
+For more detail refer to Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-traffic-sign-classifier-udacity-p3-677889288127) or join [myWhatsappGroup](https://chat.whatsapp.com/LEO0HxBQd3BBkG54veH00H)
+
+
+# Article
+I wrote an article about the steps involved in this algorithm as well as my experience with applying it on real-world self-collected data.Please refer to  
+
+Link: [Medium Article](https://medium.com/@garvtambi05/self-driving-car-traffic-sign-classifier-udacity-p3-677889288127)
+
 ### Dependencies
 
 This project requires **Python 3.5** and the following Python libraries installed:
