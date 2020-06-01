@@ -129,8 +129,4 @@ sign, so it seems that these images act as noises in the training data
 , and the drop out layer can reduce the negative effects on learning.
 The final accuracy in the validation set is around 0.954.
 
-#### Parameter Tuning
-
-Don't Forget to tune your Parameter in your model too for better understanding as well to get a model greater than this.
-
 ---
