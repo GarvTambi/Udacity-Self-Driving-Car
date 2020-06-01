@@ -53,12 +53,12 @@ Run this command at the terminal prompt to install [OpenCV](http://opencv.org/).
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-The dataset contains:-
-Number of training examples = 34799
-Number of valid examples= 4410
-Number of testing examples = 12630
-Image data shape = (32, 32, 3)
-Number of classes = 43
+* The dataset contains:-
+* Number of training examples = 34799
+* Number of valid examples= 4410
+* Number of testing examples = 12630
+* Image data shape = (32, 32, 3)
+* Number of classes = 43
 
 #### Preprocessing the image data
 
