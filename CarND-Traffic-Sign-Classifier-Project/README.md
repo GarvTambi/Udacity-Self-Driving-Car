@@ -131,3 +131,12 @@ sign, so it seems that these images act as noises in the training data
 The final accuracy in the validation set is around 0.954.
 
 ---
+
+
+**For Any Queries/Feedback Feel Free to ping me at**
+
+[myWhatsappGroup](https://chat.whatsapp.com/HewuxDMqqDK7Hxh4n7WYsh)
+
+[joinOnInstagram](https://www.instagram.com/tambi_garv05/) 
+
+[joinOnLinkedIn](https://www.linkedin.com/in/garv-tambi-a16338170/)
