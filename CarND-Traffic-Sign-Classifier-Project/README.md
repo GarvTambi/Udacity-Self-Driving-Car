@@ -26,12 +26,7 @@ Run this command at the terminal prompt to install [OpenCV](http://opencv.org/).
 
 1. [Download the dataset](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/581faac4_traffic-signs-data/traffic-signs-data.zip). This is a pickled dataset in which we've already resized the images to 32x32.
 2. Clone the project and start the notebook.
-```
-git clone https://github.com/udacity/CarND-Traffic-Signs
-cd CarND-Traffic-Signs
-jupyter notebook Traffic_Signs_Recognition.ipynb
-```
-3. Follow the instructions in the `Traffic_Signs_Recognition.ipynb` notebook.
+3. Follow the instructions in the `Traffic_Signs_Classifier.ipynb` notebook.
 
 
 **Build a Traffic Sign Recognition Project**
@@ -56,19 +51,6 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
-
-### Submission Files
-
-This project includes
-
-- The notebook `Traffic_Sign_Classifier.ipynb` (and `signames.csv` for completeness)
-- `report.html`, the exported HTML version of the python notebook
-- A directory `mydata` containing images found on the web
-- `README.md`, which you're reading
-
----
-
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
@@ -86,16 +68,13 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-See the result in, [notebook](https://github.com/lijunsong/udacity-traffic-sign-classifier/blob/master/Traffic_Sign_Classifier.ipynb)
+See the result in, [notebook](https://github.com/GarvTambi/Udacity-Self-Driving-Car/blob/master/CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.ipynb)
 
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
-
-
-The code processing images is in cell 9.
 
 Although colors in the traffic sign are important in real world for
 people to recoganize different signs, traffic signs are also different
@@ -111,18 +90,11 @@ Therefore, My preprocessing phase normalizes images from [0, 255] to
 
 #### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data
 
-The train, valid and test data are prepreocessed in cell 9. I use
-cross validation to split training data. The code to split the data
-is in function `train` (see cell 15).
-
-To cross validate my model, I randomly split the given training sets
-into training set and validation set. I preserved 10% data for
-validation. `sklearn` has the handy tool `train_test_split` to do the
-work.
+The train, valid and test data are prepreocessed.
 
 #### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code is in function `classifier` (see cell 11).
+The code is in function `classifier` 
 
 I adapted LeNet architecture: Two convolutional layers followed by one
 flatten layer, drop out layer, and three fully connected linear
@@ -142,8 +114,6 @@ layers.
 12. Fully connected layer (800 in, 43 out)
 
 #### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-The code for training the model is in cell 15 and 16.
 
 I train the model in 60 iterations (epochs), and each iteration is
 trained with 50 batch size. Adam optimizer is used with learning rate
@@ -165,7 +135,7 @@ I used the same parameter given in LeNet lab. Its training accuracy
 initially was around 90%, so I thought the filter depth was not large
 enough to capture images' shapes and contents. Previously the filter
 depth was 6 for the first layer and 12 for the second. I increased
-to 12 and 25. The accuracy increased to around 93%.
+to 12 and 25. The accuracy increased to around 95%.
 
 I then added a drop out layer, which is supposed to used to prevent
 overfitting, but I found a drop out layer could sometimes increase the
@@ -208,20 +178,6 @@ the test set. This is a sign of underfitting. By looking at the
 virtualized result, I think this can be addressed by using more image
 preprocessing techniques on the training set.
 
-
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-In the submitted version, the model can correctly guess 7 out of 11
-signs. The accuracy is 63.6%. However, it can sometimes predict
-correctly 10 out of 11 images.
-
-By looking at the virtualized data. The predictions of pedestrains,
-children crossing, and speed limit 60km/h are actually close
-enough. This is actually consistent to my various
-experiments. Sometimes the prediction accuracy can be as good as
-90%. I think to get the consistent correctness, I need more good
-data. One simple thing to do might be to preprocess the image by
-brightening dark ones. 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
