@@ -123,6 +123,7 @@ I also tuned `epoch`, `batch_size`, and `rate` parameters, and settled at
 - `epoch` 60
 - `batch_size` 50
 - `learning rate` 0.0009
+
 I have my explanations of the effect of the drop out layer after I've
 seen some of the training data. Some images are too dark to see the
 sign, so it seems that these images act as noises in the training data
