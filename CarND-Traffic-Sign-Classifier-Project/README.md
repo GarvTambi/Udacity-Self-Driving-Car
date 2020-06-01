@@ -81,18 +81,19 @@ See the result in, [notebook](https://github.com/GarvTambi/Udacity-Self-Driving-
 I adapted LeNet architecture: Two convolutional layers followed by one
 flatten layer, drop out layer, and three fully connected linear
 layers.
-5x5 convolution (32x32x1 in, 28x28x6 out)
-ReLU
-2x2 max pool (28x28x6 in, 14x14x6 out)
-5x5 convolution (14x14x6 in, 10x10x16 out)
-ReLU
-2x2 max pool (10x10x16 in, 5x5x16 out)
-5x5 convolution (5x5x6 in, 1x1x400 out)
-ReLu
-Flatten layers from numbers 8 (1x1x400 -> 400) and 6 (5x5x16 -> 400)
-Concatenate flattened layers to a single size-800 layer
-Dropout layer
-Fully connected layer (800 in, 43 out)
+
+* 5x5 convolution (32x32x1 in, 28x28x6 out)
+* ReLU
+* 2x2 max pool (28x28x6 in, 14x14x6 out)
+* 5x5 convolution (14x14x6 in, 10x10x16 out)
+* ReLU
+* 2x2 max pool (10x10x16 in, 5x5x16 out)
+* 5x5 convolution (5x5x6 in, 1x1x400 out)
+* ReLu
+* Flatten layers from numbers 8 (1x1x400 -> 400) and 6 (5x5x16 -> 400)
+* Concatenate flattened layers to a single size-800 layer
+* Dropout layer
+* Fully connected layer (800 in, 43 out)
 
 #### Type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
