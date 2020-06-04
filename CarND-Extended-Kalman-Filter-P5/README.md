@@ -81,28 +81,16 @@ Here is the simulator final state after running the EKL with dataset 2:
 
 ## Accuracy
 
-### px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52] when using the file: "obj_pose-laser-radar-synthetic-input.txt which is the same data file the simulator uses for Dataset 1"
-
 The EKF accuracy was:
 
 - Dataset 1 : RMSE <= [0.0973, 0.0855, 0.4513, 0.4399]
 - Dataset 2 : RMSE <= [0.0726, 0.0965, 0.4216, 0.4932]
 
-## Following the Correct Algorithm
+The Kalman filter implementation can be found [src/kalman_filter.cpp](./src/kalman_filter.cpp) and it is used to predict at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147) 
 
-### Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
+The first measurement is handled at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L61)
 
-The Kalman filter implementation can be found [src/kalman_filter.cpp](./src/kalman_filter.cpp) and it is used to predict at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147) line 147 and to update line 159 to 169.
-
-### Your Kalman Filter algorithm handles the first measurements appropriately.
-
-The first measurement is handled at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L61) from line 61 to line 107.
-
-### Your Kalman Filter algorithm first predicts then updates.
-
-The predict operation could be found at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147) line 147 and the update operation from line 159 to 169 of the same file.
-
-### Your Kalman Filter can handle radar and lidar measurements.
+The predict operation could be found at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147)
 
 Different type of measurements are handled in two places in [src/FusionEKF.cpp](./src/kalman_filter.cpp):
 
@@ -111,9 +99,7 @@ Different type of measurements are handled in two places in [src/FusionEKF.cpp](
 
 ## Code Efficiency
 
-### Your algorithm should avoid unnecessary calculations.
-
-An example of this calculation optimization is when the Q matrix is calculated [src/FusionEKF.cpp](./src/kalman_filter.cpp#L141) line 135 to line 144.
+An example of this calculation optimization is when the Q matrix is calculated [src/FusionEKF.cpp](./src/kalman_filter.cpp#L141)
 
 ---
 
