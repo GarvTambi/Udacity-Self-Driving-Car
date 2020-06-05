@@ -86,19 +86,6 @@ The EKF accuracy was:
 - Dataset 1 : RMSE <= [0.0973, 0.0855, 0.4513, 0.4399]
 - Dataset 2 : RMSE <= [0.0726, 0.0965, 0.4216, 0.4932]
 
-The Kalman filter implementation can be found [src/kalman_filter.cpp](./src/kalman_filter.cpp) and it is used to predict at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147) 
-
-The first measurement is handled at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L61)
-
-The predict operation could be found at [src/FusionEKF.cpp](./src/kalman_filter.cpp#L147)
-
-Different type of measurements are handled in two places in [src/FusionEKF.cpp](./src/kalman_filter.cpp):
-
-- For the first measurement from line 61 to line 107.
-- For the update part from line 159 to 169.
-
-## Code Efficiency
-
 An example of this calculation optimization is when the Q matrix is calculated [src/FusionEKF.cpp](./src/kalman_filter.cpp#L141)
 
 ---
