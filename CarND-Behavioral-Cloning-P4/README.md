@@ -115,7 +115,7 @@ Here we require one output just because this is a regression problem and we must
 
 
 ### Attempts to reduce overfitting in the model
-After the full connected layer I have used a dropout so that the model generalizes on a track that it has not seen. I keep the Dropoout rate as 0.25 to reduce the chance of overfitting.
+I have used a dropout After the full connected layer so that the model generalizes on a track that it has not seen. I keep the Dropoout rate as 0.25 to reduce the chance of overfitting.
 
 
 ### Model parameter tuning
