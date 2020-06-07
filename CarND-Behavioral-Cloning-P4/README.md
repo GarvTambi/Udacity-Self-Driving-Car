@@ -118,7 +118,7 @@ I have used a dropout After the full connected layer so that the model generaliz
 * Loss Function Used- MSE(Mean Squared Error as it is efficient for regression problem).
 
 
-### Output Video
+### Output Video: click on the image to watch it
 [![Click on Video to watch it on youtube](./images/2018_02_27_06_26_07_651.jpg)](https://www.youtube.com/watch?v=W_cMN_75Ig4)
 
 ---
