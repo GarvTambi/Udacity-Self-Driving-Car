@@ -35,7 +35,7 @@ The objective of this project is to train the computer to drive car on the basis
 
 We feed the data collected from Simulator to our model, this data is feed in the form of images captured by 3 dashboard cameras center, left and right. The output data contains a file data.csv which has the mappings of center, left and right images and the corresponding steering angle, throttle, brake and speed.
 
-Using Keras Deep learning framework we can create a model.h5 file which we can test later on simulator with the command "python drive.py model.h5". This drive.py connects your model to simulator. The challenge in this project is to collect all sorts of training data so as to train the model to respond correctly in any type of situation.
+Using Keras Deep learning framework we can create a model.h5 file which we can run later on simulator with the command "python drive.py model.h5". This drive.py connects your model to simulator. The challenge in this project is to collect all sorts of training data to train the model to respond correctly in any type of situation.
 
 ---
 
