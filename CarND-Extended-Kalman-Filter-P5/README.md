@@ -69,13 +69,7 @@ The simulator provides two datasets. The difference between them are:
 - The direction the car (the object) is moving.
 - The order the first measurement is sent to the EKF. On dataset 1, the LIDAR measurement is sent first. On the dataset 2, the RADAR measurement is sent first.
 
-Here is the simulator final state after running the EKL with dataset 1:
 
-![Simulator with dataset 1](images/simulator_dataset1.png)
-
-Here is the simulator final state after running the EKL with dataset 2:
-
-![Simulator with dataset 1](images/simulator_dataset2.png)
 
 # [Rubric](https://review.udacity.com/#!/rubrics/748/view) points
 
@@ -83,8 +77,8 @@ Here is the simulator final state after running the EKL with dataset 2:
 
 The EKF accuracy was:
 
-- Dataset 1 : RMSE <= [0.0973, 0.0855, 0.4513, 0.4399]
-- Dataset 2 : RMSE <= [0.0726, 0.0965, 0.4216, 0.4932]
+- Dataset 1 : RMSE <= [0.0972, 0.0856, 0.4513, 0.4399]
+- Dataset 2 : RMSE <= [0.0726, 0.0965, 0.4217, 0.4932]
 
 An example of this calculation optimization is when the Q matrix is calculated [src/FusionEKF.cpp](./src/kalman_filter.cpp#L141)
 
