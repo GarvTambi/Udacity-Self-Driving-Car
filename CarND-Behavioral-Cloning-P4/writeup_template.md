@@ -130,7 +130,7 @@ After the full connected layer I have used a dropout so that the model generaliz
 
 
 ### Output Video
-[![Click on Video to watch it on youtube](./images/2018_02_27_06_26_07_651.jpg)](https://www.youtube.com/watch?v=BMJi_tcetdQ)
+[![Click on Video to watch it on youtube](./images/2018_02_27_06_26_07_651.jpg)](https://www.youtube.com/watch?v=W_cMN_75Ig4)
 
 ---
 
