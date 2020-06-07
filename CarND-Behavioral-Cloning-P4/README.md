@@ -101,21 +101,21 @@ Cropped Image-
 
 
 * Then Next Step is to define the first convolutional layer with filter depth as 24 and filter size as (5,5) with (2,2) stride followed by ELU activation function
-* Moving on to the second convolutional layer with filter depth as 36 and filter size as (5,5) with (2,2) stride followed by ELU activation function 
-* The third convolutional layer with filter depth as 48 and filter size as (5,5) with (2,2) stride followed by ELU activation function
+* Moving on the second convolutional layer with filter depth as 36 and filter size as (5,5) with (2,2) stride followed by ELU activation function 
+* The third convolutional layer with filter depth as 48 and filter size (5,5) with (2,2) stride followed by ELU activation function
 * After that we define two convolutional layer with filter depth as 64 and filter size as (3,3) and (1,1) stride followed by ELU activation funciton
 * After applying convolution layer Next step is to flatten the output from 2D to side by side
-* Here we apply first fully connected layer with 100 outputs
+* Here we finally apply first fully connected layer with 100 outputs
 * Here is the first time when we introduce Dropout with Dropout rate as 0.25 to reduce the chance of overfitting
-* Next we introduce second fully connected layer with 50 outputs
-* Then comes a third connected layer with 10 outputs
+* Nextly we introduce second fully connected layer with 50 outputs.
+* Then comes third connected layer with 10 outputs
 * At last the layer with one output.
 
-Here we require one output just because this is a regression problem and we need to predict the steering angle.
+Here we require one output just because this is a regression problem and we must need to predict the steering angle.
 
 
 ### Attempts to reduce overfitting in the model
-After the full connected layer I have used a dropout so that the model generalizes on a track that it has not seen. I decided to keep the Dropoout rate as 0.25 to reduce the chance of overfitting.
+After the full connected layer I have used a dropout so that the model generalizes on a track that it has not seen. I keep the Dropoout rate as 0.25 to reduce the chance of overfitting.
 
 
 ### Model parameter tuning
