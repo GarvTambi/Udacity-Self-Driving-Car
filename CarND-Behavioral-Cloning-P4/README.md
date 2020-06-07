@@ -69,13 +69,13 @@ The model.py file contains the code for training and saving the convolution neur
 
 * I take the the dataset provided by Udacity
 * I am using OpenCV to load the images, as in OpenCV the images are read in BGR format but we need to convert to RGB as in drive.py it is processed in RGB format.
-* Since we have a steering angle associated with three images we introduce a correction factor for left and right images since the steering angle is captured by the center angle.
-* I decided to introduce a correction factor of 0.2
-* For the left images I increase the steering angle by 0.2 and for the right images I decrease the steering angle by 0.2
+* we have a steering angle associated with three images So, we introduce a correction factor for left and right images since the steering angle is captured by the center angle.
+* I introduce a correction factor of 0.2
+* For the left images I increase the steering angle by 0.2 factor and for the right images I decrease the steering angle by 0.2 factor
 * Sample Image
 * I shuffle the images so that the order in which images comes doesn't matters to the CNN
 * Augmenting the data- i flip the image horizontally and adjust steering angle accordingly, I used cv2 to flip the images.We also used rotating , resizing for data argumentation.
-* In augmenting after flipping multiply the steering angle by a factor of -1 to get the steering angle for the flipped image.
+* In data argument after flipping multiply the steering angle by a factor of -1 to get the steering angle for the flipped image.
 * So according to this approach we were able to generate 6 images corresponding to one entry in .csv file...3 from 3 cameras and other three from rotating the images horizontally.
 <img src="./images/center_2016_12_01_13_31_15_513.jpg">
 
