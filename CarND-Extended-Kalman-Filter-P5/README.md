@@ -2,7 +2,7 @@
 Udacity Self-Driving Car Nanodegree - Extended Kalman Filter Implementation
 
 # Overview
-This project consists of implementing an [Extended Kalman Filter](https://en.wikipedia.org/wiki/Extended_Kalman_filter) with C++. In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. A simulator provided by Udacity ([it could be downloaded here](https://github.com/udacity/self-driving-car-sim/releases)) generates noisy RADAR and LIDAR measurements of the position and velocity of an object, and the Extended Kalman Filter[EKF] must fusion those measurements to predict the position of the object. The communication between the simulator and the EKF is done using [WebSocket](https://en.wikipedia.org/wiki/WebSocket) using the [uWebSockets](https://github.com/uNetworking/uWebSockets) for either Linux or Mac systems. For windows you can use either Docker, VMware, or even [Windows 10 Bash on Ubuntu](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to install uWebSocketIO implementation on the EKF side.
+This project consists of implementing an [Extended Kalman Filter](https://en.wikipedia.org/wiki/Extended_Kalman_filter) with C++. In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar sensor measurements. A simulator provided by Udacity ([it could be downloaded here](https://github.com/udacity/self-driving-car-sim/releases)) generates noisy RADAR and LIDAR measurements of the position and velocity of an object, and the Extended Kalman Filter[EKF] must fusion those measurements to predict and update the position of the object. The communication between the simulator and the EKF is done using [WebSocket](https://en.wikipedia.org/wiki/WebSocket) using the [uWebSockets](https://github.com/uNetworking/uWebSockets) for either Linux or Mac systems. For windows you can use either Docker, VMware, or even [Windows 10 Bash on Ubuntu](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to install uWebSocketIO implementation on the EKF side.
 To get this project started, Udacity provides a seed project that could be found (here)(https://github.com/udacity/CarND-Extended-Kalman-Filter-Project).
 
 ## Other Important Dependencies
@@ -20,7 +20,7 @@ To get this project started, Udacity provides a seed project that could be found
 
 ## Basic Build Instructions
 
-1. Clone this repo.
+1. Clone this repository.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make` 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
@@ -47,7 +47,7 @@ Here is the main protocol that main.cpp uses for uWebSocketIO in communicating w
 
 ## Code Style
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
+Please stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
 
 ## Running the Filter
 
@@ -67,7 +67,7 @@ The following is an image of the simulator:
 The simulator provides two datasets. The difference between them are:
 
 - The direction the car (the object) is moving.
-- The order the first measurement is sent to the EKF. On dataset 1, the LIDAR measurement is sent first. On the dataset 2, the RADAR measurement is sent first.
+- The order the first measurement is sent to the EKF. On dataset 1, First measurement is sent by LIDAR Sensor. On the dataset 2, Fist measurement is sent by RADAR Sensor.
 
 
 
@@ -79,8 +79,6 @@ The EKF accuracy was:
 
 - Dataset 1 : RMSE <= [0.0972, 0.0856, 0.4513, 0.4399]
 - Dataset 2 : RMSE <= [0.0726, 0.0965, 0.4217, 0.4932]
-
-An example of this calculation optimization is when the Q matrix is calculated [src/FusionEKF.cpp](./src/kalman_filter.cpp#L141)
 
 ---
 
