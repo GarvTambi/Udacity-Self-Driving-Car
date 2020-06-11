@@ -1,6 +1,8 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
    
+![Driving](images/driving.png)   
+   
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
 
@@ -64,13 +66,14 @@ the path has processed since last time.
 
 Click the "Select" button and hope that autonomus car works best on the highway.
 
-![Simulator first screen](images/simulator.png)
-
-Click the "Select" button and hope that autonomus car works best on the highway.
-
 I didn't make any changes in the cmake configuration. A new file was added [src/spline.h](./scr/spline.h). It is the [Cubic Spline interpolation implementation](http://kluge.in-chemnitz.de/opensource/spline/): a single .h file you can use splines instead of polynomials. This suggestion is taken from the classroom QA video and it works great.
 
 No speed message and max jerk message was seen as well as car didn't collide and car always remain in the lane except time of lane changes and it safely changes the lane when there is slow car in front of it.
+
+![15 miles](images/15_miles.png)
+
+![20 miles](images/20_miles.png)
+
 
 # [Rubic](https://review.udacity.com/#!/rubrics/1020/view) points
 
