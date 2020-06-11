@@ -72,6 +72,7 @@ I didn't make any changes in the cmake configuration. A new file was added [src/
 
 No speed message and max jerk message was seen as well as car didn't collide and car always remain in the lane except time of lane changes and it safely changes the lane when there is slow car in front of it.
 
+# [Rubic](https://review.udacity.com/#!/rubrics/1020/view) points
 
 ## Reflection
 
@@ -97,7 +98,7 @@ Depend on the prediction of the situation we are in, this code increases the spe
 ### Trajectory [line 317 to line 416](./src/main.cpp#L313)
  Calculation of the trajectory based on the speed and lane output from the behavior, car coordinates and past path points is done here.
 
-The last two points of the previous trajectory (or the car position if there are no previous trajectory, lines 321 to 345) are used in conjunction three points at a far distance (lines 348 to 350) to initialize the spline calculation (line 370 and 371). The coordinates are transformed (shift and rotation) to local car coordinates (lines 361 to 367) to make the work less complicated to the spline calculation based on those points.
+The last two points of the previous trajectory (or the car position if there are no previous trajectory, lines 321 to 345) are used in conjunction three points at a far distance (lines 348 to 350) and to initialize spline calculation (line 370 and 371). The coordinates are transformed (shift and rotation) to local car coordinates (lines 361 to 367) to make the work less complicated to the spline calculation based on those points.
 
 To ensure more continuity on the trajectory (in addition to adding the last two point of the pass trajectory to the spline adjustment), the pass trajectory points are copied to the new trajectory (lines 374 to 379). Other points are calculated by evaluating the spline and transforming the output coordinates to not local coordinates (lines 388 to 407). Worth noticing the change in the velocity of the car from line 393 to 398. Decision on the speed change is decided on the behavior part of the code, but it is used in that part to increase/decrease speed on every trajectory points instead of doing it for the complete trajectory.
 
