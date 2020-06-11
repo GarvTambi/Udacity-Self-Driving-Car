@@ -59,6 +59,49 @@ the path has processed since last time.
 
 ["sensor_fusion"] A 2d vector of cars and then that car's [car's unique ID, car's x position in map coordinates, car's y position in map coordinates, car's x velocity in m/s, car's y velocity in m/s, car's s position in frenet coordinates, car's d position in frenet coordinates. 
 
+
+![Simulator first screen](images/simulator.png)
+
+Click the "Select" button and hope that autonomus car works best on the highway.
+
+![Simulator first screen](images/simulator.png)
+
+Click the "Select" button and hope that autonomus car works best on the highway.
+
+I didn't make any changes in the cmake configuration. A new file was added [src/spline.h](./scr/spline.h). It is the [Cubic Spline interpolation implementation](http://kluge.in-chemnitz.de/opensource/spline/): a single .h file you can use splines instead of polynomials. This suggestion is taken from the classroom QA video and it works great.
+
+No speed message and max jerk message was seen as well as car didn't collide and car always remain in the lane except time of lane changes and it safely changes the lane when there is slow car in front of it.
+
+
+## Reflection
+
+Based on the given code from the seed project, the path planning algorithms start at [src/main.cpp](./src/main.cpp#L246) line 246 to the line 416. The code is divided into different functions to show the overall process, but I decide to have everything in a single place to avoid jumping here and there for different parts of the file or other files. As well as I added comments to improve the code readability.
+
+Mainly code consist of three parts:
+
+### Prediction [line 255 to line 290](./src/main.cpp#L255)
+In this part code deal with the telemetry and sensor fusion data. It intents to reason about the environment. In this case, we want to know three different aspects of it:
+
+- Is there a car in front of us that blocking the traffic.
+- Is there a car to the right of us that making a lane change not safe.
+- Is there a car to the left of us that making a lane change not safe.
+we get answer of these questions by calculating the lane each other car is and the position it will be at the end of the last plan trajectory. A car is considered "dangerous" when the distance of our car is less than 30 meters in front or behind us.
+
+### Behavior [line 292 to line 314](./src/main.cpp#L293)
+Now this part decides what to do:
+  - If there is a car in front of us, do we change lanes?
+  - Should we speed up or slow down?
+
+Depend on the prediction of the situation we are in, this code increases the speed, decrease speed, or make a lane change when it is safe.  A `speed_diff` is created to be used for speed changes when generating the trajectory in the last part of the code, Instead of increasing the speed at this part of the code. By This approach this makes the car more responsive acting faster to changing situations like a car in front of it trying to apply breaks to avoid a collision.
+
+### Trajectory [line 317 to line 416](./src/main.cpp#L313)
+ Calculation of the trajectory based on the speed and lane output from the behavior, car coordinates and past path points is done here.
+
+The last two points of the previous trajectory (or the car position if there are no previous trajectory, lines 321 to 345) are used in conjunction three points at a far distance (lines 348 to 350) to initialize the spline calculation (line 370 and 371). The coordinates are transformed (shift and rotation) to local car coordinates (lines 361 to 367) to make the work less complicated to the spline calculation based on those points.
+
+To ensure more continuity on the trajectory (in addition to adding the last two point of the pass trajectory to the spline adjustment), the pass trajectory points are copied to the new trajectory (lines 374 to 379). Other points are calculated by evaluating the spline and transforming the output coordinates to not local coordinates (lines 388 to 407). Worth noticing the change in the velocity of the car from line 393 to 398. Decision on the speed change is decided on the behavior part of the code, but it is used in that part to increase/decrease speed on every trajectory points instead of doing it for the complete trajectory.
+
+
 ## Details
 
 1. The car uses a perfect controller and will visit every (x,y) point it recieves in the list every .02 seconds. The units for the (x,y) points are in meters and the spacing of the points determines the speed of the car. The vector going from a point to the next point in the list dictates the angle of the car. Acceleration both in the tangential and normal directions is measured along with the jerk, the rate of change of total Acceleration. The (x,y) point paths that the planner recieves should not have a total acceleration that goes over 10 m/s^2, also the jerk should not go over 50 m/s^3. (NOTE: As this is BETA, these requirements might change. Also currently jerk is over a .02 second interval, it would probably be better to average total acceleration over 1 second and measure jerk from that.
